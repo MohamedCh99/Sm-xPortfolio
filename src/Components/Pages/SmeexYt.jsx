@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdsmeex from '../../Asset/prasmeexyt.mp4';
 import vdpre from '../../Asset/PhotospROJECTS (1).mp4';
-
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 const SmeexYt = () => {
   const [clicked1, setClicked1] = useState(false);
   const [clicked2, setClicked2] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     const handleWindowResize = () => {
@@ -85,50 +87,34 @@ const SmeexYt = () => {
         <h1 className="title__pages title__smeex">Smééx Yt</h1>
         <div className="smeex__text">
           <p>
-            Découvrez <span>Smeex-Yt</span>, le site qui vous permet de générer
-            facilement des idées et du contenu pour{' '}
-            <span>vos vidéos YouTube en seulement 3 clics.</span>{' '}
-            <a href="">Cliquez ici pour commencer votre création</a>.
+            {t('Découvrez')} <span>Smeex-Yt</span>, {t('descriptionsmeexyt1')}{' '}
+            <span>{t('descriptionsmeexyt2')}.</span>
           </p>
-          <h2>Comment sa marche :</h2>
+          <h2>{t('h1smeex')} :</h2>
         </div>
         <div className="contentsmeexyt">
           <div className="smeex__idee">
             <ul>
-              <ol> - Définissez votre niche en toute simplicité</ol>
+              <ol> - {t('et1')}</ol>
+              <ol> - {t('et2')}</ol>
               <ol>
                 {' '}
-                - Segmentez votre niche pour obtenir les sujets les plus
-                pertinents
+                - {t('et31')} <span>" {t('bt1')} "</span> {t('et32')}
               </ol>
-              <ol>
-                {' '}
-                - Cliquer sur{' '}
-                <span>" Lancez-vous dans votre prochaine vidéo "</span> pour
-                démarrer
-              </ol>
-              <ol> - Sélectionnez le sujet qui vous passionne le plus</ol>
+              <ol> - {t('et4')}</ol>
             </ul>
           </div>
           <div className="smeex__script">
             <ul>
+              <ol> - {t('et5')}</ol>
+              <ol>- {t('et6')}</ol>
               <ol>
                 {' '}
-                - Choisissez le format de vidéo (court ou long) en fonction de
-                vos préférences
+                - {t('et71')}
+                <span>" {t('bt2')} "</span> {t('et71')}
               </ol>
               <ol>
-                - Déterminer la durée idéale de votre vidéo (entre 5 minutes et
-                1 heure)
-              </ol>
-              <ol>
-                {' '}
-                - Cliquer sur <span>" Creer votre prochaine video "</span> pour
-                démarrer la production
-              </ol>
-              <ol>
-                - Voilà ! Vous êtes prêt à filmer votre vidéo{' '}
-                <span>en seulement 3 clics !</span>
+                - {t('et8')} <span>{t('et82')}!</span>
               </ol>
             </ul>
           </div>

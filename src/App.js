@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Router, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
 import Work from './Components/Work/Work';
 import Backgroundhome from './Components/Background/Backgroundhome';
@@ -16,6 +16,7 @@ import BarRecherche from './Components/Pages/BarRecherche';
 import FitClub from './Components/Pages/FitClub';
 import Product from './Components/Pages/Product';
 import LandingPage from './Components/Pages/LandingPage';
+import { AnimatePresence } from 'framer-motion';
 function App() {
   const location = useLocation();
   const cursorRef = useRef();
@@ -30,21 +31,23 @@ function App() {
       <div ref={cursorRef} className="cursor__perso"></div>
       <Backgroundhome />
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/work" element={<Work />}></Route>
-        <Route path="/about" element={<About />}></Route>
-        <Route path="/contact" element={<Contact />}></Route>
-        <Route path="/project" element={<Projects />}></Route>
-        <Route path="/smeexyt" element={<SmeexYt />}></Route>
-        <Route path="/itbudnet" element={<ItBudnet />}></Route>
-        <Route path="/spotifyclone" element={<Spotify />}></Route>
-        <Route path="/netmovie" element={<NetMovie />}></Route>
-        <Route path="/searchbar" element={<BarRecherche />}></Route>
-        <Route path="/fitclub" element={<FitClub />}></Route>
-        <Route path="/product" element={<Product />}></Route>
-        <Route path="/landingpage" element={<LandingPage />}></Route>
-      </Routes>
+      <AnimatePresence>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/work" element={<Work />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/contact" element={<Contact />}></Route>
+          <Route path="/project" element={<Projects />}></Route>
+          <Route path="/smeexyt" element={<SmeexYt />}></Route>
+          <Route path="/itbudnet" element={<ItBudnet />}></Route>
+          <Route path="/spotifyclone" element={<Spotify />}></Route>
+          <Route path="/netmovie" element={<NetMovie />}></Route>
+          <Route path="/searchbar" element={<BarRecherche />}></Route>
+          <Route path="/fitclub" element={<FitClub />}></Route>
+          <Route path="/product" element={<Product />}></Route>
+          <Route path="/landingpage" element={<LandingPage />}></Route>
+        </Routes>
+      </AnimatePresence>
     </div>
   );
 }

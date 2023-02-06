@@ -4,34 +4,64 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
+const keyVariant = {
+  hidden: {
+    opacity: 0,
+    y: '-100%',
+  },
+  visible: {
+    y: '0%',
+    opacity: 1,
+    transition: {
+      duration: 0.7,
+    },
+  },
+};
 const Work = () => {
   const { t, i18n } = useTranslation();
   return (
     <div className="work__pages">
       <div className="menu__items">
         <ul>
-          <li>
+          <motion.li
+            initial={{ opacity: 0, y: '-100%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}>
             <Link to="/" className="work__links">
               {t('accueil')}
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: '-100%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}>
             <Link to="/project" className="work__links">
               {t('Projects')}
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: '-100%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}>
             <Link to="/about" className="work__links">
               {t('apropos')}
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, y: '-100%' }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}>
             <Link to="/contact" className="work__links">
               {t('contact')}
             </Link>
-          </li>
+          </motion.li>
         </ul>
-        <div className="work__social">
+        <motion.div
+          className="work__social"
+          variants={keyVariant}
+          animate="visible"
+          initial="hidden">
           <ul className="ul">
             <li>
               <FontAwesomeIcon icon={faArrowRight} className="arrow__work" />{' '}
@@ -48,7 +78,7 @@ const Work = () => {
               </a>
             </li>
           </ul>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

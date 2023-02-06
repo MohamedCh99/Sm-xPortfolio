@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './Header.css';
-import logo from '../../Asset/darklogo.svg';
+import logo from '../../Asset/darklogo.png';
 import menu from '../../Asset/menu.png';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion';
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [active, setActive] = useState(false);
@@ -13,7 +14,11 @@ const Header = () => {
   };
   return (
     <div className="header__page global__container">
-      <div className="header__content">
+      <motion.div
+        className="header__content"
+        initial={{ opacity: 0, y: '-500%' }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}>
         {/* logo */}
         <img src={logo} alt="" className="header__logo" />
 
@@ -42,7 +47,7 @@ const Header = () => {
             <img src={menu} alt="" className="header__menu" />
           </NavLink>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

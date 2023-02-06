@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdnetmovie from '../../Asset/PhotospROJECTS (4).mp4';
-
+import { useTranslation } from 'react-i18next';
 const NetMovie = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -72,14 +72,12 @@ const NetMovie = () => {
         <h1 className="title__pages title__smeex">NetMovie</h1>
         <div className="smeex__text">
           <p>
-            <span>NetMovie</span> est une collection de mes projets qui mettent
-            en valeur mes compétences en{' '}
-            <span>API, JavaScript ,React, CSS </span> et autres technologies
-            front-end.{' '}
+            <span>NetMovie</span> {t('descriptioncode1')}{' '}
+            <span>API, JavaScript ,React, CSS </span> {t('descriptioncode2')}.{' '}
             <a
               href="https://github.com/MohamedCh99/NetMovie-App"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>

@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdldp from '../../Asset/PhotospROJECTS (8).mp4';
-
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 const LandingPage = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -72,13 +73,12 @@ const LandingPage = () => {
         <h1 className="title__pages title__smeex">Moha - Code</h1>
         <div className="smeex__text">
           <p>
-            <span>Moha - Code</span> est une collection de mes projets qui
-            mettent en valeur mes compétences en matière de{' '}
-            <span>HTML, CSS, JavaScript</span> et autres technologies front-end.{' '}
+            <span>Moha - Code</span> {t('descriptioncode1')}{' '}
+            <span>HTML, CSS, JavaScript</span> {t('descriptioncode2')}.{' '}
             <a
               href="https://github.com/MohamedCh99/My-Portfolio"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>

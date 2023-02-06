@@ -1,5 +1,6 @@
 .header__page {
   background-color: var(--darkback);
+  overflow: hidden;
 }
 .header__content {
   display: flex;

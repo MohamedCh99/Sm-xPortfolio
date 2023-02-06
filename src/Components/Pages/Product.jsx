@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdproduct from '../../Asset/PhotospROJECTS (7).mp4';
+import { useTranslation } from 'react-i18next';
 
 const Product = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -69,16 +70,15 @@ const Product = () => {
       </div>
 
       <div className="content__smeex">
-        <h1 className="title__pages title__smeex">Product</h1>
+        <h1 className="title__pages title__smeex">{t('h1prod')}</h1>
         <div className="smeex__text">
           <p>
-            <span>Page Produit</span> est une collection de mes projets qui
-            mettent en valeur mes compétences en{' '}
+            <span>Page Produit</span> {t('descriptioncode1')}{' '}
             <span>JavaScript ,HTML, CSS.</span>{' '}
             <a
               href="https://github.com/MohamedCh99/Product-Page"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>

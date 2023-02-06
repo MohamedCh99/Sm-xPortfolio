@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdsspo from '../../Asset/PhotospROJECTS (3).mp4';
-
+import { useTranslation } from 'react-i18next';
 const Spotify = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -72,14 +72,13 @@ const Spotify = () => {
         <h1 className="title__pages title__smeex">Spotify Clone</h1>
         <div className="smeex__text">
           <p>
-            <span>Spotify - Clone</span> est une collection de mes projets qui
-            mettent en valeur mes compétences en{' '}
-            <span>JavaScript, API, React, Material-ui </span> et autres
-            technologies front-end.{' '}
+            <span>Spotify - Clone</span> {t('descriptioncode1')}{' '}
+            <span>JavaScript, API, React, Material-ui </span>{' '}
+            {t('descriptioncode2')}{' '}
             <a
               href="https://github.com/MohamedCh99/Spotify_clone_app"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>

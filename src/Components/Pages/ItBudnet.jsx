@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdsbud from '../../Asset/PhotospROJECTS (2).mp4';
-
+import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 const ItBudnet = () => {
+  const { t, i18n } = useTranslation();
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
@@ -72,38 +74,31 @@ const ItBudnet = () => {
         <h1 className="title__pages title__smeex">ItBudNet</h1>
         <div className="smeex__text">
           <p>
-            Gagnez en contrôle sur votre argent grâce à <span>ItBudNet</span>,
-            le site facile d'utilisation qui vous permet de suivre votre budget
-            en temps réel.{' '}
-            <a href="">Cliquez ici pour voir ou part votre argent</a>.
+            {t('descriptionbud1')} <span>ItBudNet</span>,{t('descriptionbud2')}.{' '}
+            <a
+              target="_blank"
+              href="https://github.com/MohamedCh99/ItBudNey-App">
+              {t('liencode')}
+            </a>
+            .
           </p>
-          <h2>
-            Découvrez où part votre argent et comment l'optimiser en quelques
-            étapes simples :
-          </h2>
+          <h2>{t('h1bud')} :</h2>
         </div>
         <div className="contentsmeexyt">
           <div className="smeex__idee">
             <ul>
-              <ol> - Entrez votre budget actuel</ol>
-              <ol> - Remplissez le formulaire en suivant la vidéo</ol>
-              <ol> - Mettre à jour vos dépenses au fur et à mesure</ol>
+              <ol> - {t('et1bud')}</ol>
+              <ol> - {t('et2bud')}</ol>
+              <ol> - {t('et3bud')}</ol>
             </ul>
           </div>
           <div className="smeex__script">
             <ul>
+              <ol> - {t('et4bud')}</ol>
               <ol>
-                {' '}
-                - Explorez les statistiques pour suivre vos dépenses mensuelles
+                - {t('Grâce')} <span>ItBudNet</span> {t('et5bud')}
               </ol>
-              <ol>
-                - Grâce à <span>ItBudNet</span> vous pouvez contrôler vos
-                dépenses
-              </ol>
-              <ol>
-                - Voilà ! Vous êtes prêt améliorez votre vie financière en toute
-                simplicité !
-              </ol>
+              <ol>- {t('et6bud')}</ol>
             </ul>
           </div>
         </div>

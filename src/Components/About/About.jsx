@@ -4,10 +4,15 @@ import me from '../../Asset/meblack.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
+import { motion } from 'framer-motion';
 const About = () => {
   const { t, i18n } = useTranslation();
   return (
-    <div className="about__page">
+    <motion.div
+      className="about__page"
+      initial={{ opacity: 0, y: '-100%' }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}>
       <div className="leftabout__side">
         <h1 className="title__pages">{t('apropostitle')}</h1>
         <p>{t('apropostext')}</p>
@@ -37,7 +42,7 @@ const About = () => {
           <img src={me} alt="" className="about__image" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

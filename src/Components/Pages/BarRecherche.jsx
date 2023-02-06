@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdbar from '../../Asset/PhotospROJECTS (5).mp4';
+import { useTranslation } from 'react-i18next';
 
 const BarRecherche = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -69,16 +70,15 @@ const BarRecherche = () => {
       </div>
 
       <div className="content__smeex">
-        <h1 className="title__pages title__smeex">Barre de Recherche</h1>
+        <h1 className="title__pages title__smeex">{t('h1search')}</h1>
         <div className="smeex__text">
           <p>
-            <span>Barre De Recherche</span> est une collection de mes projets
-            qui mettent en valeur mes compétences en{' '}
-            <span>JavaScript ,HTML, CSS </span>{' '}
+            <span>{t('h1search')}</span> {t('descriptioncode1')}{' '}
+            <span>JavaScript, API, HTML, CSS </span>{' '}
             <a
               href="https://github.com/MohamedCh99/Javascript30Jours/tree/main/06%20-%20TypeAhead"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>

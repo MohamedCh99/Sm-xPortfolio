@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdfit from '../../Asset/PhotospROJECTS (6).mp4';
+import { useTranslation } from 'react-i18next';
 
 const FitClub = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-
+  const { t, i18n } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {
@@ -72,13 +73,12 @@ const FitClub = () => {
         <h1 className="title__pages title__smeex">Fitness Club</h1>
         <div className="smeex__text">
           <p>
-            <span>Fitness Website</span> est une collection de mes projets qui
-            mettent en valeur mes compétences en{' '}
+            <span>Fitness Website</span> {t('descriptioncode1')}{' '}
             <span>JavaScript ,React, CSS.</span>{' '}
             <a
               href="https://github.com/MohamedCh99/FitClub_WebSite"
               target="_blank">
-              Lien GitHub
+              {t('liencode')}
             </a>
           </p>
         </div>
