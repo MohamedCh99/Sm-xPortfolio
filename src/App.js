@@ -1,7 +1,7 @@
 import './App.css';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
-import { Routes, Route, Router, useLocation } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useRef } from 'react';
 import Work from './Components/Work/Work';
 import Backgroundhome from './Components/Background/Backgroundhome';

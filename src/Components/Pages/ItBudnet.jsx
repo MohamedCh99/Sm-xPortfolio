@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdsbud from '../../Asset/PhotospROJECTS (2).mp4';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 const ItBudnet = () => {
   const { t, i18n } = useTranslation();
@@ -40,10 +39,6 @@ const ItBudnet = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +72,8 @@ const ItBudnet = () => {
             {t('descriptionbud1')} <span>ItBudNet</span>,{t('descriptionbud2')}.{' '}
             <a
               target="_blank"
-              href="https://github.com/MohamedCh99/ItBudNey-App">
+              href="https://github.com/MohamedCh99/ItBudNey-App"
+              rel="noreferrer">
               {t('liencode')}
             </a>
             .

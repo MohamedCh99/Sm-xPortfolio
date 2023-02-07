@@ -1,7 +1,5 @@
 import React from 'react';
 import './Home.css';
-import Backgroundhome from '../Background/Backgroundhome';
-import Header from '../Header/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';

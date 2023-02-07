@@ -39,10 +39,6 @@ const FitClub = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +73,8 @@ const FitClub = () => {
             <span>JavaScript ,React, CSS.</span>{' '}
             <a
               href="https://github.com/MohamedCh99/FitClub_WebSite"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>

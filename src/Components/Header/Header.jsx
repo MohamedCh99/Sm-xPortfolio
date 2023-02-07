@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Header.css';
 import logo from '../../Asset/darklogo.png';
 import menu from '../../Asset/menu.png';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const Header = () => {
   const { t, i18n } = useTranslation();
-  const [active, setActive] = useState(false);
-  const handleactive = () => {
-    setActive(true);
-  };
   return (
     <div className="header__page global__container">
       <motion.div
@@ -24,23 +19,21 @@ const Header = () => {
 
         <div className="rightheader__side">
           {/* langue */}
-          {i18n.language == 'en' && (
-            <a
-              href="#"
+          {i18n.language === 'en' && (
+            <button
               onClick={() => {
                 i18n.changeLanguage('fr');
               }}>
-              FR
-            </a>
+              {t('fr')}
+            </button>
           )}
-          {i18n.language == 'fr' && (
-            <a
-              href="#"
+          {i18n.language === 'fr' && (
+            <button
               onClick={() => {
                 i18n.changeLanguage('en');
               }}>
-              EN
-            </a>
+              {t('fr')}
+            </button>
           )}
           {/* menu */}
           <NavLink to="/work" className="header__menu">

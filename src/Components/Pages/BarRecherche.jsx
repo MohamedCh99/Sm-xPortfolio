@@ -39,10 +39,6 @@ const BarRecherche = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +73,8 @@ const BarRecherche = () => {
             <span>JavaScript, API, HTML, CSS </span>{' '}
             <a
               href="https://github.com/MohamedCh99/Javascript30Jours/tree/main/06%20-%20TypeAhead"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>

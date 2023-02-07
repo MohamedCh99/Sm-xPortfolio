@@ -39,10 +39,6 @@ const Product = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +73,8 @@ const Product = () => {
             <span>JavaScript ,HTML, CSS.</span>{' '}
             <a
               href="https://github.com/MohamedCh99/Product-Page"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>

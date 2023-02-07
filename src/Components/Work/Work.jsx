@@ -67,13 +67,17 @@ const Work = () => {
               <FontAwesomeIcon icon={faArrowRight} className="arrow__work" />{' '}
               <a
                 href="https://www.instagram.com/mohamed.chouati_/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 instagram
               </a>
             </li>
             <li>
               <FontAwesomeIcon icon={faArrowRight} className="arrow__work" />{' '}
-              <a href="https://www.linkedin.com/in/mch05" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/mch05"
+                target="_blank"
+                rel="noreferrer">
                 linkedin
               </a>
             </li>

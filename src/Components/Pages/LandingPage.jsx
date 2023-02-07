@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdldp from '../../Asset/PhotospROJECTS (8).mp4';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 const LandingPage = () => {
   const [clicked1, setClicked1] = useState(false);
@@ -39,10 +38,6 @@ const LandingPage = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +72,8 @@ const LandingPage = () => {
             <span>HTML, CSS, JavaScript</span> {t('descriptioncode2')}.{' '}
             <a
               href="https://github.com/MohamedCh99/My-Portfolio"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>

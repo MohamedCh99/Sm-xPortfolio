@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import vdsmeex from '../../Asset/prasmeexyt.mp4';
 import vdpre from '../../Asset/PhotospROJECTS (1).mp4';
-import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 const SmeexYt = () => {
   const [clicked1, setClicked1] = useState(false);

@@ -25,6 +25,12 @@
   background-color: white;
 }
 
+@media screen and (max-width: 1180px) {
+  .cursor__perso {
+    display: none;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -97,6 +103,15 @@ a {
   font-size: 20px;
   font-weight: 500;
   transition: 0.4s;
+}
+button {
+  border: none;
+  background-color: transparent;
+  color: var(--lightback);
+  font-size: 20px;
+  font-weight: 500;
+  transition: 0.4s;
+  cursor: pointer;
 }
 
 li {

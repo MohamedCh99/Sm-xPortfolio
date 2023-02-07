@@ -20,17 +20,19 @@ const About = () => {
           <li>
             <FontAwesomeIcon icon={faArrowRight} className="arrow__about" />
 
-            {i18n.language == 'en' && (
+            {i18n.language === 'en' && (
               <a
                 href="https://drive.google.com/file/d/1mjXHSUdCmGq9gMjZK6Iu8j2P_jC7ml8n/view?usp=share_link"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 {t('cv')}
               </a>
             )}
-            {i18n.language == 'fr' && (
+            {i18n.language === 'fr' && (
               <a
                 href="https://drive.google.com/file/d/1gtHolEqUYlfcovtky4z59hBC0o8jtmrN/view"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 {t('cv')}
               </a>
             )}

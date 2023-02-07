@@ -36,14 +36,18 @@ function Contact() {
               <FontAwesomeIcon icon={faArrowRight} className="arrow__contact" />
               <a
                 href="https://www.instagram.com/mohamed.chouati_/"
-                target="_blank">
+                target="_blank"
+                rel="noreferrer">
                 Instagram
               </a>
             </li>
             <br />
             <li>
               <FontAwesomeIcon icon={faArrowRight} className="arrow__contact" />
-              <a href="https://www.linkedin.com/in/mch05" target="_blank">
+              <a
+                href="https://www.linkedin.com/in/mch05"
+                target="_blank"
+                rel="noreferrer">
                 linkedin
               </a>
             </li>

@@ -38,10 +38,6 @@ const Spotify = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -77,7 +73,8 @@ const Spotify = () => {
             {t('descriptioncode2')}{' '}
             <a
               href="https://github.com/MohamedCh99/Spotify_clone_app"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>

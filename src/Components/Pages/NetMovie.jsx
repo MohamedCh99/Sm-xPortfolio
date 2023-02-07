@@ -38,10 +38,6 @@ const NetMovie = () => {
     setHover(false);
     counterClick();
   };
-  const handleclickedd = () => {
-    setHover(false);
-    counterClick();
-  };
 
   return (
     <div className="smeex__page">
@@ -76,7 +72,8 @@ const NetMovie = () => {
             <span>API, JavaScript ,React, CSS </span> {t('descriptioncode2')}.{' '}
             <a
               href="https://github.com/MohamedCh99/NetMovie-App"
-              target="_blank">
+              target="_blank"
+              rel="noreferrer">
               {t('liencode')}
             </a>
           </p>
