@@ -19,7 +19,7 @@ const keyVariant = {
   },
 };
 const Work = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="work__pages">
       <div className="menu__items">

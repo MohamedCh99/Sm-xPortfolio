@@ -6,7 +6,7 @@ const NetMovie = () => {
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth <= 1180) {

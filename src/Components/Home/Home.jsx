@@ -19,7 +19,7 @@ const keyVariant = {
   },
 };
 const Home = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="home__page global__container ">
       <div className="intro__wrapper">

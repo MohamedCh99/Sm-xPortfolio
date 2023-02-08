@@ -3,7 +3,7 @@ import './Header.css';
 import logo from '../../Asset/darklogo.png';
 import menu from '../../Asset/menu.png';
 import { useTranslation } from 'react-i18next';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 const Header = () => {
   const { t, i18n } = useTranslation();
@@ -15,7 +15,9 @@ const Header = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}>
         {/* logo */}
-        <img src={logo} alt="" className="header__logo" />
+        <Link to="/">
+          <img src={logo} alt="" className="header__logo" />
+        </Link>
 
         <div className="rightheader__side">
           {/* langue */}

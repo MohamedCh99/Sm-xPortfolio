@@ -5,7 +5,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 function Contact() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className="contact__page">
       <motion.h1

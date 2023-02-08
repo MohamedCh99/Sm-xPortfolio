@@ -3,7 +3,7 @@ import './Styles.css';
 import vdsbud from '../../Asset/PhotospROJECTS (2).mp4';
 import { useTranslation } from 'react-i18next';
 const ItBudnet = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [clicked1, setClicked1] = useState(false);
   const [hover, setHover] = useState(true);
   const [counter, setCounter] = useState(1);

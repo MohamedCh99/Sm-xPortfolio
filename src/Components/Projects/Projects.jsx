@@ -24,7 +24,7 @@ const keyVariant = {
   },
 };
 const Projects = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [selectedIndex, setSelectedIndex] = useState(null);
   return (
     <div className="overProjects">
