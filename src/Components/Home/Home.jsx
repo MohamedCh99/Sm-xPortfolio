@@ -32,7 +32,7 @@ const Home = () => {
             {t('titleone')} <span>Mohamed Chouati</span>{' '}
           </h3>
           <h3>
-            {t('titletwo')} <span>Smééx</span>{' '}
+            {t('titletwo')} <span>MC_Expertise</span>{' '}
           </h3>
           <p>{t('parahome')}</p>
           <div className="intro_links">
