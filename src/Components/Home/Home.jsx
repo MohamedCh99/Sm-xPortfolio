@@ -35,6 +35,7 @@ const Home = () => {
             {t('titletwo')} <span>MC_Expertise</span>{' '}
           </h3>
           <p>{t('parahome')}</p>
+          <p>" {t('slogan')} "</p>
           <div className="intro_links">
             <ul className="ul">
               <li>

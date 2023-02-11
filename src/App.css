@@ -122,6 +122,14 @@ img {
   pointer-events: none;
 }
 
+::selection {
+  background-color: var(--colorspan);
+  color: var(--darkback);
+}
+::-moz-selection {
+  background-color: var(--colorspan);
+  color: var(--darkback);
+}
 .title__pages {
   font-size: 70px;
   font-weight: 700;
