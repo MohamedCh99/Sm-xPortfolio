@@ -17,6 +17,7 @@ import FitClub from './Components/Pages/FitClub';
 import Product from './Components/Pages/Product';
 import LandingPage from './Components/Pages/LandingPage';
 import { AnimatePresence } from 'framer-motion';
+import Loading from './Components/Pages/Loading';
 function App() {
   const location = useLocation();
   const cursorRef = useRef();
@@ -46,6 +47,7 @@ function App() {
           <Route path="/fitclub" element={<FitClub />}></Route>
           <Route path="/product" element={<Product />}></Route>
           <Route path="/landingpage" element={<LandingPage />}></Route>
+          <Route path="/loading" element={<Loading />}></Route>
         </Routes>
       </AnimatePresence>
     </div>

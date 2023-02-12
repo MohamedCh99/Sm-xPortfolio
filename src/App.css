@@ -151,4 +151,7 @@ img {
   .title__pages {
     font-size: 60px;
   }
+  .global__container {
+    padding: 0rem 3rem;
+  }
 }

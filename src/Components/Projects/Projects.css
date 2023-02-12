@@ -80,6 +80,6 @@
 }
 @media screen and (max-height: 800px) {
   .leftProjects__side {
-    padding: 2rem 2rem 0 4rem;
+    padding: 0rem 2rem 0 4rem;
   }
 }
