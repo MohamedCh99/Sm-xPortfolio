@@ -1,6 +1,5 @@
 import React from 'react';
 import './About.css';
-import me from '../../Asset/meblack.jpg';
 import mew from '../../Asset/mewhite.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
