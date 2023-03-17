@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import me from '../../Asset/meblack.jpg';
+import mew from '../../Asset/mewhite.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { useTranslation } from 'react-i18next';
@@ -41,7 +42,7 @@ const About = () => {
       </div>
       <div className="rightabout__side">
         <div className="border__imgg">
-          <img src={me} alt="" className="about__image" />
+          <img src={mew} alt="" className="about__image" />
         </div>
       </div>
     </motion.div>

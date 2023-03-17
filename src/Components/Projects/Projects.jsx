@@ -67,7 +67,7 @@ const Projects = () => {
                   <a href="/landingpage"> Moha - Code</a>
                 </div>
               </motion.li>
-              <motion.li
+              {/* <motion.li
                 initial={{ opacity: 0, y: '-100px' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.95 }}
@@ -80,7 +80,7 @@ const Projects = () => {
                   />
                   <a href="/itbudnet"> ItBudNey</a>
                 </div>
-              </motion.li>
+              </motion.li> */}
               <motion.li
                 initial={{ opacity: 0, y: '-100px' }}
                 animate={{ opacity: 1, y: 0 }}
@@ -137,7 +137,7 @@ const Projects = () => {
                   <a href="/fitclub"> The Fit Club</a>
                 </div>
               </motion.li>
-              <motion.li
+              {/* <motion.li
                 initial={{ opacity: 0, y: '-100px' }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7 }}
@@ -150,7 +150,7 @@ const Projects = () => {
                   />
                   <a href="/product"> {t('proec')}</a>
                 </div>
-              </motion.li>
+              </motion.li> */}
             </ul>
           </div>
         </div>

@@ -87,7 +87,14 @@ const SmeexYt = () => {
         <div className="smeex__text">
           <p>
             {t('Découvrez')} <span>Smeex-Yt</span>, {t('descriptionsmeexyt1')}{' '}
-            <span>{t('descriptionsmeexyt2')}.</span>
+            <span>
+              <a
+                href="https://www.linkedin.com/feed/update/urn:li:activity:7038633728570482688/"
+                target="_blank"
+                rel="noreferrer">
+                {t('descriptionsmeexyt2')}.
+              </a>
+            </span>
           </p>
           <h2>{t('h1smeex')} :</h2>
         </div>
